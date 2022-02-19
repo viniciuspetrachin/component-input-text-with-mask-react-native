@@ -21,14 +21,13 @@ const Input: React.FC<InputProps> = ({ mask, inputMaskChange, ...rest }) => {
   }
 
   return (
-      <TextInput
-        style={styles.input}
-        onChangeText={(text) => handleChange(text)}
-        placeholder={mask === 'phone' ? 'Phone number' : 'Value'}
-        placeholderTextColor='rgba(255, 255, 255, 0.9)'
-        {...rest}
-      />
-    
+    <TextInput
+      style={styles.input}
+      onChangeText={(text: string) => handleChange(text)}
+      placeholder={mask === 'phone' ? 'Phone number' : 'Value'}
+      placeholderTextColor="rgba(255, 255, 255, 0.9)"
+      {...rest}
+    />
   )
 }
 
